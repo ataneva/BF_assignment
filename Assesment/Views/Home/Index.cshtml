@@ -1,0 +1,26 @@
+﻿@model  Assesment.Models.GuessModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>View</title>
+</head>
+<body>
+    <div>
+
+        @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+        {
+            @Model.Message
+
+            <br />
+            @Html.TextBoxFor(model => model.Guess)
+            @Html.HiddenFor(model => model.NumberOfAttempts)
+            <input type="submit" value="Enter the value" />
+
+        }
+
+    </div>
+</body>
+</html>
